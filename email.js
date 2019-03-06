@@ -17,7 +17,7 @@ var transporter = nodemailer.createTransport({
 
 var mailOptions = {
   from: 'srikanthbaburao@yahoo.com',
-  to: 'nandakumarvn01@gmail.com,',
+  to: 'hr@thamescs.com,',
   subject: 'Notification',
   
 }; 
