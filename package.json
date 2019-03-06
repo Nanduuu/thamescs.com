@@ -1,0 +1,27 @@
+{
+  "name": "example-create-react-app-express",
+  "version": "1.0.0",
+  "scripts": {
+    "client": "cd client && yarn start",
+    "server": "nodemon AppNode.js",
+    "start": "node AppNode.js",
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
+    "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "connect-busboy": "0.0.2",
+    "convert-excel-to-json": "^1.4.0",
+    "csvtojson": "^2.0.8",
+    "express": "^4.16.3",
+    "express-fileupload": "^1.0.0-alpha.1",
+    "formidable": "^1.2.1",
+    "multer": "^1.4.0",
+    "node": "^10.8.0",
+    "nodemailer": "^4.6.8",
+    "react-router-dom": "^4.3.1"
+  },
+  "devDependencies": {
+    "concurrently": "^3.6.1"
+  }
+}
