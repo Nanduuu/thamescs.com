@@ -17,7 +17,7 @@ var transporter = nodemailer.createTransport({
 
 var mailOptions = {
   from: 'srikanthbaburao@yahoo.com',
-  to: 'hr@thamescs.com,',
+  to: 'hr@thamescs.com',
   subject: 'Notification',
   
 }; 
@@ -35,14 +35,17 @@ router.post('/',urlencodedparser,function(req,res){
       mailOptions.html = '<h4>' + "First Name :" + fields.Fname + '<h4>' +
             '<h4>' + "Last Name :" + fields.Lname + '<h4>' +
             '<h4>' + "Contact Number :" + fields.contactNumber + '<h4>' +
-            '<h4>' + "Highest Qualification :" + fields.highestQualification + '<h4>' +
+            '<h4>' + "Short Introduction :" + fields.highestQualification + '<h4>' +
             '<h4>' + "Email ID :" + fields.email + '<h4>' +
-            '<h4>' + "Experience :" + fields.experience + '<h4>' +
-            '<h4>' + "Job Title :" + fields.jobTitle ;
+            '<h4>' + "Current Position :" + fields.jobTitle ;
 
       mailOptions.attachments = [{
         filename: files.resume.name,
         path:files.resume.path,
+      },{
+        filename: files.cover.name,
+        path:files.cover.path,
+
       }];
 
   transporter.sendMail(mailOptions, function(error, info){
