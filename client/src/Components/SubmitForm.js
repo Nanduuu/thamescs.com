@@ -250,7 +250,7 @@ render(){
 
 					<Row style={{margin:"5px"}} >
 					<Col>
-					<lable> Upload Cover Latter  * </lable>
+					<lable> Upload Cover Letter  * </lable>
 					<Upload {...propsCover} required>
 					    <Button>
 					      <Icon type="upload" /> Click to Upload
